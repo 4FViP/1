@@ -41,7 +41,7 @@ async def e(app, msg):
             info = {'coins': 0 , 'id': join_user, 'premium': False, 'admin': False, "phone":[], "users":[], "date":str(time.time())}
             db.set(f'user_{join_user}', info)
             db.set(f'user_{to_user}', someinfo)
-            await app.send_message(to_user, f'فات {msg.from_user.mention} لرابط دعوتك، واخذت 300 أرصدة ..')
+            await app.send_message(to_user, f'- تم دخول {msg.from_user.mention} لرابط دعوتك، واخذت 300 جنيه ..')
             await startm(app, msg)
             return
     else:

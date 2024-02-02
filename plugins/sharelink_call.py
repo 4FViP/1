@@ -40,6 +40,6 @@ async def sharelinkk(app, query):
 قسم مشاركة رابط الدعوه!
 رابط الدعوة الخاص بك هو: {link} .
 ⎯ ⎯ ⎯ ⎯
-على كل عضو يفوت للبوت من رابطك تحصل على {cq} أرصده.
+على كل عضو يدخل للبوت من رابطك تحصل على {cq} جنيه.
     """
     await query.edit_message_text(rk, reply_markup=keys)

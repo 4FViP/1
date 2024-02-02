@@ -2,7 +2,7 @@ import pyrogram,asyncio,random
 from pyrogram.raw import functions
 from pyrogram import Client, filters
 async def vote(session,channel, msg_id, pi):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     await ap.start()
     try:
         await ap.vote_poll(channel, msg_id, [pi])
@@ -12,7 +12,7 @@ async def vote(session,channel, msg_id, pi):
         await ap.stop()
         return False
 async def view(session, channel, msg_id):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     await ap.start()
     try:
         z = await ap.invoke(functions.messages.GetMessagesViews(
@@ -27,7 +27,7 @@ async def view(session, channel, msg_id):
         await ap.stop()
         return False
 async def sendmsg(session, username, text, type):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     await ap.start()
     try:
         if type == 'private':
@@ -43,7 +43,7 @@ async def sendmsg(session, username, text, type):
     except:
         return False 
 async def reaction(session, channel, msg_id, rs: list):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     await ap.start()
     try:
         await ap.send_reaction(channel, msg_id, random.choice(rs))
@@ -53,7 +53,7 @@ async def reaction(session, channel, msg_id, rs: list):
         await ap.stop()
         return False
 async def members(session, channel):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     await ap.start()
     try:
         await ap.join_chat(channel)
@@ -63,7 +63,7 @@ async def members(session, channel):
         await ap.stop()
         return False
 async def click(session, channel, msg_id):
-    ap = Client(name=session[10:], api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', session_string=session, workers=2, no_updates=True)
+    ap = Client(name=session[10:], api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', session_string=session, workers=2, no_updates=True)
     try:
         await ap.start()
     

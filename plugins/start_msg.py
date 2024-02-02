@@ -21,7 +21,7 @@ async def startm(app, msg):
       if not await check_channel_member(app, i, user_id):
         k = f'''
 عذراً عزيزي 🤚 
-عليك الاشتراك بقناة البوت لتتمكن من أستخدامهُ :
+عليك الاشتراك بقناة البوت لمتابعه كود الصفقه والربح :
 - @{i}
 - @{i}
 — — — — — — — — — —
@@ -33,10 +33,9 @@ async def startm(app, msg):
         keys = mk(
         [
             [btn(text='رصيدي: {:,} IQD'.format(coin), callback_data='lol')],
-            [btn(text='⦅ قسم الخدمات ⦆', callback_data='service')],
             [btn(text='⦅ تجميع الرصيد ⦆', callback_data='invite'), btn(text='⦅ شراء الرصيد ⦆', callback_data='buy')],
             [btn(text='⦅ معلومات حسابك ⦆', callback_data='account'), btn(text='⦅ تحويل الرصيد ⦆', callback_data='trans')],
-            [btn(text='قناة التحديثات', url='trprogram.t.me')]
+            [btn(text='قناة الصفقات', url='GX_PU.t.me')]
         ]
     )
         rk = f'''
@@ -59,10 +58,9 @@ async def startm(app, msg):
         keys = mk(
         [
             [btn(text='رصيدك: :,{} IQD'.format(coin), callback_data='none')],
-            [btn(text='قسم خدمات الرشق', callback_data='service')],
             [btn(text='تجميع رصيد', callback_data='invite'), btn(text='شراء رصيد', callback_data='buy')],
             [btn(text='معلومات حسابك', callback_data='account'), btn(text='تحويل رصيد', callback_data='trans')],
-            [btn(text='قناة التحديثات', url='trprogram.t.me')]
+            [btn(text='قناة التحديثات', url='GX_PU.t.me')]
         ]
     )
         rk =f'''
