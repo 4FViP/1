@@ -32,15 +32,14 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدي: {:,} IQD'.format(coin), callback_data='lol')],
+            [btn(text='رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
             [btn(text='⦅ تجميع الرصيد ⦆', callback_data='invite'), btn(text='⦅ شراء الرصيد ⦆', callback_data='buy')],
             [btn(text='⦅ معلومات حسابك ⦆', callback_data='account'), btn(text='⦅ تحويل الرصيد ⦆', callback_data='trans')],
             [btn(text='قناة الصفقات', url='GX_PU.t.me')]
         ]
     )
         rk = f'''
-⥃ مرحبا بك عزيزي في بوت Services | الخدمات ♯ 
-هنالك نوعين من الخدمات العادي و الـ ViP ✰
+- مرحبا بك عزيزي في بوت منصه  ExToP للخدمات والاستثمار
 ⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
         '''
@@ -57,15 +56,14 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدك: :,{} IQD'.format(coin), callback_data='none')],
-            [btn(text='تجميع رصيد', callback_data='invite'), btn(text='شراء رصيد', callback_data='buy')],
-            [btn(text='معلومات حسابك', callback_data='account'), btn(text='تحويل رصيد', callback_data='trans')],
+            [btn(text='رصيدك: :,{} EGP'.format(coin), callback_data='none')],
+            [btn(text='تجميع رصيد', callback_data='invite'), btn(text='شراء باقه', callback_data='buy')],
+            [btn(text='معلومات حسابك', callback_data='account'), btn(text='سحب الرصيد', callback_data='trans')],
             [btn(text='قناة التحديثات', url='GX_PU.t.me')]
         ]
     )
         rk =f'''
-⥃ مرحبا بك عزيزي في بوت Services | الخدمات ♯ 
-هنالك نوعين من الخدمات العادي و الـ ViP ✰
+- مرحبا بك عزيزي في بوت منصه  ExToP للخدمات والاستثمار
 ⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
         '''
