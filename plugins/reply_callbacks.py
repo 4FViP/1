@@ -69,7 +69,7 @@ async def acc(app, query):
         await query.edit_message_text(rk, reply_markup=keys)
     else:
         return
-@app.on_callback_query(filters.regex("^v1$"))
+@app.on_callback_query(filters.regex("^ve1$"))
 async def b(app, query):
     user_id = query.from_user.id
     chats = db.get('force')

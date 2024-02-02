@@ -33,8 +33,8 @@ async def startm(app, msg):
         keys = mk(
         [
             [btn(text='- رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
-            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='v1')],
-            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='trans')],
+            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='ve1')],
+            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='sharelink')],
             [btn(text='- قناه المنصه', url='GX_PU.t.me')]
         ]
     )
@@ -59,8 +59,8 @@ async def startm(app, msg):
         keys = mk(
         [
             [btn(text='- رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
-            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='buy')],
-            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='trans')],
+            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='ve1')],
+            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='sharelink')],
             [btn(text='- قناه المنصه', url='GX_PU.t.me')]
         ]
     )
