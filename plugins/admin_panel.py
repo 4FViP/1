@@ -351,7 +351,7 @@ async def clear(app,call):
   await call.answer('سوف يأخذ بعض الوقت ..', show_alert=True)
   for i in range(len(ses)):
     try:
-      c = temp('::memory::', api_id=21627756, api_hash='fe77fbf0cae9f7f5ece37659e2466cf1', in_memory=True, session_string=ses[i])
+      c = temp('::memory::', api_id=11750778, api_hash='d0352df3ddb5e00bcf16b55dae071b52', in_memory=True, session_string=ses[i])
     except:
       continue
     try:
