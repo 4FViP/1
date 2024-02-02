@@ -99,7 +99,55 @@ async def b(app, query):
     """
     keys = mk(
         [
-            
+            [btn(text='1', callback_data='rr1'), btn(text='2', callback_data='fees')],
+            [btn(text='3', callback_data='vis'), btn(text='4', callback_data='fees')],
+            [btn(text='5', callback_data='vis'), btn(text='6', callback_data='fees')],
+            [btn('رجوع', 'back_home')]
+        ]
+    )
+    
+@app.on_callback_query(filters.regex("^rr1$"))
+async def b(app, query):
+    user_id = query.from_user.id
+    chats = db.get('force')
+    from .force import check_channel_member
+    for i in chats:
+      if not await check_channel_member(app, i, user_id):
+        k = f'''
+ - الرجاء شحن علي الرقم ده 5484548
+ 250 ٠جنيه
+        '''
+        return await query.edit_message_text(k, reply_markup=mk([[btn(f'- @{i} .', url=f't.me/{i}')]]))
+    rk  = """
+ - الرجاء شحن علي الرقم ده 5484548
+ 250 ٠جنيه
+    """
+    keys = mk(
+        [
+            [btn(text='للتاكيد ', callback_data='v10'), btn(text='لالغاء', callback_data='fees')],
+            [btn('رجوع', 'back_home')]
+        ]
+    )
+    await query.edit_message_text(rk, reply_markup=keys)
+@app.on_callback_query(filters.regex("^v10$"))
+async def b(app, query):
+    user_id = query.from_user.id
+    chats = db.get('force')
+    from .force import check_channel_member
+    for i in chats:
+      if not await check_channel_member(app, i, user_id):
+        k = f'''
+ للتاكيد دوس 1 
+ للالعاء 2 
+        '''
+        return await query.edit_message_text(k, reply_markup=mk([[btn(f'- @{i} .', url=f't.me/{i}')]]))
+    rk  = """
+ للتاكيد دوس 1 
+ للالعاء 2 
+    """
+    keys = mk(
+        [
+            [btn(text='للتاكيد ', callback_data='v10'), btn(text='لالغاء', callback_data='fees')],
             [btn('رجوع', 'back_home')]
         ]
     )
