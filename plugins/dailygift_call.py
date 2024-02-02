@@ -58,7 +58,7 @@ async def dailygiftt(app,query):
         return
     else:
         info = db.get(f'user_{query.from_user.id}')
-        info['coins'] = int(info['coins']) + 150
+        info['coins'] = int(info['coins']) + 50
         db.set(f"user_{query.from_user.id}", info)
         await query.edit_message_text("- اخذت الهدية اليومية 150 أرصده!!\nهديتك الي بعدها باجر .", reply_markup=keys)
         return

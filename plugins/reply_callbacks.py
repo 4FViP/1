@@ -29,10 +29,7 @@ async def invte_call(app, query):
         ]
     )
     rk = """
-مرحبا بك في قسم ⦅ تجميع الرصيد ⦆ 
-- هناك طريقتين لتجميع الرصيد 
- 1 - مشاركة رابط الدعوة 
-2 - الصفقه اليومين ViP (مره واحده فقط يوميا)
+- إذا قمت بدعوه شخص سوف تحصل عل 50 جنيه مكافئه فوريه من المنصه.
     """
     await query.edit_message_text(rk, reply_markup= keys)
 @app.on_callback_query(filters.regex("^account$"), group=2)
@@ -72,7 +69,7 @@ async def acc(app, query):
         await query.edit_message_text(rk, reply_markup=keys)
     else:
         return
-@app.on_callback_query(filters.regex("^buy$"))
+@app.on_callback_query(filters.regex("^v1$"))
 async def b(app, query):
     user_id = query.from_user.id
     chats = db.get('force')

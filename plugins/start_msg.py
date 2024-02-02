@@ -32,16 +32,18 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
-            [btn(text='⦅ تجميع الرصيد ⦆', callback_data='invite'), btn(text='⦅ شراء الرصيد ⦆', callback_data='buy')],
-            [btn(text='⦅ معلومات حسابك ⦆', callback_data='account'), btn(text='⦅ تحويل الرصيد ⦆', callback_data='trans')],
-            [btn(text='قناة الصفقات', url='GX_PU.t.me')]
+            [btn(text='- رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
+            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='v1')],
+            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='trans')],
+            [btn(text='- قناه المنصه', url='GX_PU.t.me')]
         ]
     )
         rk = f'''
-- مرحبا بك عزيزي في بوت منصه  ExToP للخدمات والاستثمار
-⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
+- مرحبا بك عزيزي في منصه ExToP للخدمات والاستثمار
+- البوت يتميز بسرعة وتنفيذ الطلبات
+
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
+-
         '''
         await app.send_message(msg.from_user.id,rk, reply_markup=keys)
     else:
@@ -56,15 +58,17 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدك: :,{} EGP'.format(coin), callback_data='none')],
-            [btn(text='تجميع رصيد', callback_data='invite'), btn(text='شراء باقه', callback_data='buy')],
-            [btn(text='معلومات حسابك', callback_data='account'), btn(text='سحب الرصيد', callback_data='trans')],
-            [btn(text='قناة التحديثات', url='GX_PU.t.me')]
+            [btn(text='- رصيدي: {:,} EGP'.format(coin), callback_data='lol')],
+            [btn(text='- سحب ', callback_data='invite'), btn(text='- ايداع ', callback_data='buy')],
+            [btn(text='- معلومات حسابي', callback_data='account'), btn(text='- مشاركه مع الاخرين', callback_data='trans')],
+            [btn(text='- قناه المنصه', url='GX_PU.t.me')]
         ]
     )
         rk =f'''
-- مرحبا بك عزيزي في بوت منصه  ExToP للخدمات والاستثمار
-⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
+- مرحبا بك عزيزي في منصه ExToP للخدمات والاستثمار
+- البوت يتميز بسرعة وتنفيذ الطلبات
+
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
+-
         '''
         await app.send_message(msg.from_user.id,rk, reply_markup=keys)
